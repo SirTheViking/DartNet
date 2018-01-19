@@ -1,0 +1,258 @@
+<html>
+
+<head>
+    <!-- Maybe make external sites for the css files -->
+    <title>DartNet | Start</title>
+    <link rel="stylesheet" type="text/css" href="/style_main.css">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="/script_jquery.js"></script>
+    <script src="/script_jscolor.js"></script>
+</head>
+
+<body>
+
+    <button id="menu-button">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+        </svg>
+    </button>
+
+
+
+    <!-- SVGs are courtesy of https://materialdesignicons.com/ -->
+    <div id="menu-items">
+        <a href="/sites_customise.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                <path d="M21.7,13.35L20.7,14.35L18.65,12.3L19.65,11.3C19.86,11.09 20.21,11.09 20.42,11.3L21.7,12.58C21.91,12.79 21.91,13.14 21.7,13.35M12,18.94L18.06,12.88L20.11,14.93L14.06,21H12V18.94M12,14C7.58,14 4,15.79 4,18V20H10V18.11L14,14.11C13.34,14.03 12.67,14 12,14M12,4A4,4 0 0,0 8,8A4,4 0 0,0 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4Z"
+                />
+            </svg>
+        </a>
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                <path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z"
+                />
+            </svg>
+        </a>
+        <a href="/sites_following.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="25" viewBox="0 0 24 24">
+                <path d="M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z"
+                />
+            </svg>
+        </a>
+        <a href="/sites_reposts.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                <path d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z" />
+            </svg>
+        </a>
+    </div>
+
+
+    <!-- Profile Sidebar Contents -->
+    <aside id="profile">
+        <div id="thumb">
+            <!-- get the source from JSON -->
+            <img src="">
+        </div>
+        <header id="username">$PLACEHOLDER_TEXT</header>
+        <main id="bio">
+            <p>$PLACEHOLDER_BIO</p>
+        </main>
+    </aside>
+
+
+    <main id="customisation-content">
+
+        <form action="" id="customisation">
+            <header>Customisation</header>
+            <div class="page-info">
+                Don't forget to Submit when you are finished customising
+            </div>
+
+            <div class="color-container">
+                <div>Username</div>
+                <input class="username" value="" />
+            </div>
+
+            <div class="color-container">
+                <div>Short Bio</div>
+                <input class="bio" value="" />
+            </div>
+
+            <div class="color-container">
+                <div>Accent Color</div>
+                <input class="jscolor ac" value="1234" />
+            </div>
+
+            <div class="color-container">
+                <div>Background Color</div>
+                <input class="jscolor bc" />
+            </div>
+
+            <div class="color-container">
+                <div>Secondary Background Color</div>
+                <input class="jscolor sbc" />
+            </div>
+
+            <div class="color-container">
+                <div>Font Color 1</div>
+                <input class="jscolor fcd" />
+            </div>
+
+            <div class="color-container">
+                <div>Font Color 2</div>
+                <input class="jscolor fcl" />
+            </div>
+        </form>
+
+        <div id="preview">
+            <div class="post-item">
+                <header>
+                    <div class="thumb"><img src="dat://610689813cef72f0fc5418c2427a664818cefc32214b5b6fb2f8de34ca9e6104//img_profile.jpg"></div>
+                    <a href="#">Accent color</a>
+                </header>
+                <main>
+                    <div>
+                        This is where font color 2 is used. This is how a typical post will look with your chosen colors
+                    </div>
+                    <footer>This is where font color 2 is used</footer>
+                </main>
+            </div>
+            <div class="button-container">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="/script_index.js"></script>
+    <script src="/script_rebuild.js"></script>
+    <script src="/script_hash.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            console.log(sha256("Carlos"));
+
+            // Initializing the template colors and values
+            // for live updating, so the user understands what's changing
+            $(".username").val(user_profile.username).on("input propertychange paste", function () {
+                $("#profile header").text($(this).val());
+            });
+            $(".bio").val(user_profile.bio).on("input propertychange paste", function () {
+                $("#profile #bio p").text($(this).val());
+            });;
+            $(".post-item header .thumb img").attr("src", user_profile.profile_pic);
+            $(".post-item header").css({
+                "border-left": "2px solid #000",
+                "border-left-color": user_profile.accent_color
+            });
+            $(".post-item header a").css({
+                "color": user_profile.accent_color
+            });
+
+
+
+            $(".ac").val(colors.accent.substr(1)).css("background-color", colors.accent).change(function () {
+                $(".post-item header a, #username, #customisation-content button").css({
+                    "color": $(this).val()
+                });
+                $(".post-item header").css({
+                    "border-left": "2px solid #fff",
+                    "border-color": $(this).val()
+                });
+                $("#menu-button svg").css({
+                    "fill": $(this).val()
+                });
+                $("#menu-items").css({
+                    "background-color": $(this).val()
+                });
+                $("#customisation-content header").css({
+                    "border-color": $(this).val()
+                });
+            });
+
+
+            $(".bc").val(colors.background.substr(1)).css("background-color", colors.background).change(
+                function () {
+                    $("body, html").css({
+                        "background-color": $(this).val()
+                    });
+                    $("#menu-items svg").css({
+                        "fill": $(this).val()
+                    });
+                });
+
+
+            $(".sbc").val(colors.sbackground.substr(1)).css("background-color", colors.sbackground).change(
+                function () {
+                    $(".post-item, #customisation-content button").css({
+                        "background-color": $(this).val()
+                    });
+                });
+
+
+            $(".fcl").val(colors.sfontlight.substr(1)).css("background-color", colors.sfontlight).change(
+                function () {
+                    $(
+                        ".post-item main p, .post-item main h2, #customisation-content header, #bio, .color-container div"
+                    ).css({
+                        "color": $(this).val()
+                    });
+                });
+
+
+            $(".fcd").val(colors.sfontdark.substr(1)).css("background-color", colors.sfontdark).change(function () {
+                $(".post-item main footer").css({
+                    "color": $(this).val()
+                });
+            });
+
+
+
+            $(".button-container button").on("click", function () {
+                $("#customisation").submit();
+            });
+
+            $("#customisation").on("submit", function (e) {
+                e.preventDefault();
+
+                let username = $(".username").val();
+                let bio = $(".bio").val();
+                let accent = "#" + $(".ac").val();
+                let background = "#" + $(".bc").val();
+                let second_background = "#" + $(".sbc").val();
+                let font_light = "#" + $(".fcl").val();
+                let font_dark = "#" + $(".fcd").val();
+                let follow = [];
+
+                for (var i = 0; i < following.length; i++) {
+                    if (following[i] == archive.url) {
+                        break;
+                    } else {
+                        follow.push(following[i]);
+                    }
+                }
+
+                user_profile.username = username;
+                user_profile.bio = bio;
+                user_profile.accent_color = accent;
+                user_profile.background_color = background;
+                user_profile.secondary_background = second_background;
+                user_profile.secondary_font_dark = font_dark;
+                user_profile.secondary_font_light = font_light;
+                user_profile.following = follow;
+
+
+                console.log(user_profile.following);
+
+                archive.writeFile("/profile.json", JSON.stringify(user_profile, null, "\t")).then(
+                    function () {
+                        archive.commit();
+                        rebuild();
+                    });
+            });
+        });
+    </script>
+</body>
+
+</html>

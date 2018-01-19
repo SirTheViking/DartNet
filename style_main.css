@@ -1,0 +1,812 @@
+/*
+It all starts at:
+----- dat://610689813cef72f0fc5418c2427a664818cefc32214b5b6fb2f8de34ca9e6104/
+That's the original site.
+*/
+
+/* ==========================================
+
+        Include the fonts
+
+============================================ */
+
+@font-face {
+    font-family: "industriale";
+    src: url("/font_Industry-Bold-webfont.woff2");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/font_Montserrat-Regular.ttf");
+}
+
+
+/* Quick Reset */
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(24, 27, 33, 1);
+    transition: all .5s;
+}
+
+#menu-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    transition: all .5s;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 20;
+}
+
+#menu-button svg {
+    fill: rgba(102, 222, 234, 1);
+    transition: all .5s;
+}
+
+#menu-items {
+    width: 50px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(102, 222, 234, 1);
+    margin-left: -50px;
+    transition: all .5s;
+}
+
+#menu-items svg {
+    fill: rgba(24, 27, 33, 1);
+    height: 50px;
+    width: 100%;
+    transition: all .5s;
+}
+
+#menu-items svg:hover {
+    fill: rgba(82, 89, 104, 1);
+}
+
+
+/* ==========================================
+
+        Style for the profile aside
+
+============================================ */
+
+#profile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition: all .5s;
+}
+
+#profile #thumb {
+    width: 230px;
+    height: 230px;
+    margin-top: 5vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#profile #thumb img {
+    max-width: 230px;
+    min-height: 230px;
+}
+
+#profile header {
+    min-width: 220px;
+    width: auto;
+    margin-top: 1vw;
+    font-family: "industriale";
+    font-size: 20px;
+    text-align: left;
+    color: rgba(102, 222, 234, 1);
+    transition: all .5s;
+}
+
+#profile #bio {
+    width: 220px;
+    word-wrap: break-word;
+    font-family: "Montserrat";
+    font-size: 12px;
+    color: rgba(82, 89, 104, 1);
+}
+
+#profile #bio p {
+    text-align: left;
+}
+
+
+/* ==========================================
+
+        Style for the FEED
+
+============================================ */
+
+#feed-content {
+    width: 500px;
+    height: auto;
+    min-height: 600px;
+    position: relative;
+    top: 5vw;
+    left: 500px;
+}
+
+#feed-content form {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(102, 222, 234, 1);
+    transition: all .5s;
+    margin-bottom: 40px;
+}
+
+
+#feed-content form textarea {
+    width: 90%;
+    height: 98px;
+    resize: none;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    color: rgba(82, 89, 104, 1);
+    outline: none;
+    font-family: "Montserrat";
+}
+
+#feed-content form button {
+    width: 20%;
+    height: 100px;
+    border: none;
+    font-family: "industriale";
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(102, 222, 234, 1);
+    color: rgba(51, 57, 71, 1);
+    transition: all .5s;
+}
+
+#feed-content form button:hover {
+    background-color: rgba(102, 222, 234, 0.46);
+}
+
+#feed-content #feed {
+    width: 100%;
+    height: auto;
+}
+
+
+/* The customisation page form */
+#customisation-content {
+    width: 500px;
+    height: auto;
+    min-height: 600px;
+    position: relative;
+    top: 5vw;
+    left: 500px;
+}
+
+#customisation-content form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+#customisation-content #customisation {
+    flex-direction: column;
+    border: none;
+}
+
+#customisation-content #customisation header {
+    width: 100%;
+    color: rgba(82, 89, 104, 1);
+    text-align: left;
+    font-size: 30px;
+    font-family: "industriale";
+    text-align: left;
+    border-bottom: 2px solid rgba(102, 222, 234, 1);
+    margin-bottom: 10px;
+    transition: all .5s;
+}
+
+#customisation-content .button-container button {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: rgba(102, 222, 234, 1);
+    background-color: rgba(24, 27, 33, 1);
+    margin-top: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+#customisation-content .button-container button:hover {
+    text-decoration: underline;
+}
+
+#customisation-content #customisation .page-info {
+    width: 100%;
+    text-align: left;
+    color: rgba(82, 89, 104, 1);
+    font-family: "industriale";
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+
+/* ==========================================
+
+        Customisation page inputs and post
+
+============================================ */
+.color-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin: 0.5vh 0 0 0;
+    font-family: "Montserrat";
+    color: rgba(82, 89, 104, 1);
+    font-size: 13px;
+}
+
+.color-container input {
+    outline: none;
+    border: none;
+    background-color: rgba(82, 89, 104, 1);
+    font-family: "Montserrat";
+    padding: 10px;
+    padding-left: 15px;
+    box-shadow: 0 0 5px #000;
+}
+
+.color-container div {
+    transition: all .5s;
+}
+
+#preview {
+    width: 100%;
+    height: auto;
+}
+
+.color-container .username, .color-container .bio {
+    background-color: #f2f2f2;
+}
+
+/* ==========================================
+
+        Following Blocks in the FOLLOWING page
+
+============================================ */
+.following-box {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: #f2f2f2;
+    float: left;
+    margin: 3px;
+    position: relative;
+    cursor: pointer;
+    transition: all .5s;
+    text-decoration: none;
+}
+
+.following-box:hover {
+    box-shadow: 0 0 10px #000;
+}
+
+.following-box .background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.following-box .background img {
+    max-width: 120%;
+    min-height: 100%;
+    filter: blur(5px);
+    transition: all .5s;
+}
+
+.following-box .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    opacity: 0.5;
+    z-index: 2;
+    border-radius: 4px;
+}
+
+.following-box:hover .background img {
+    transform: scale(1.3);
+}
+
+.following-box .profile-info {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+}
+
+.following-box .thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px #000;
+}
+
+.following-box .thumb img {
+    max-width: 80px;
+    min-height: 80px;
+}
+
+.following-box footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "industriale";
+    font-size: 15px;
+    color: rgba(82, 89, 104, 1);
+    margin-top: 20px;
+    z-index: 3;
+}
+
+
+
+
+/* ==========================================
+
+        Style for the FEED ITEMS
+
+============================================ */
+
+.post-item {
+    width: 100%;
+    min-height: 100px;
+    /*background-color: rgba(28, 43, 50, 0.68);*/
+    margin-bottom: 30px;
+    box-shadow: 0 0 5px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2px;
+    transition: all .5s;
+    background-color: rgba(24, 27, 33, 1);
+}
+
+.post-item header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 0 20px 0;
+    font-family: "industriale";
+    /*background-color: #1c2b32;*/
+    transition: inherit;
+    border-left: 2px solid #000;
+}
+
+.post-item header .thumb {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+    transition: inherit;
+}
+
+.post-item header .thumb img {
+    max-width: 40px;
+    min-height: 40px;
+}
+
+.post-item header a {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    font-family: inherit;
+    color: rgba(102, 222, 234, 1);
+    transition: inherit;
+}
+
+.post-item header a:first-of-type {
+    padding-left: 10px;
+}
+
+.post-item header svg {
+    fill: rgba(82, 89, 104, 1);
+}
+
+.post-item main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: inherit;
+}
+
+.post-item main div {
+    width: 90%;
+    height: auto;
+    font-family: "Montserrat";
+    font-size: 14px;
+    color: rgba(82, 89, 104, 1);
+    transition: inherit;
+    word-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat" !important;
+    color: rgba(82, 89, 104, 1) !important;
+    width: 100%;
+    text-align: left;
+}
+
+.post-item main img {
+    width: 100%;
+    transition: all .5s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #000;
+    transition: all .5s;
+}
+
+.post-item main p img {
+    width: 100%;
+    transition: all .5s;
+    cursor: pointer;
+    box-shadow: 0 0 10px #000;
+    transition: all .5s;
+}
+
+.post-item main a {
+    text-decoration: none;
+    color: rgba(102, 222, 234, 1);
+    font-family: "Montserrat";
+    font-size: inherit;
+    transition: all .5s;
+}
+
+.post-item main a:hover {
+    color: rgba(102, 222, 234, 0.46);
+}
+
+.post-item footer {
+    width: 90%;
+    height: 20px;
+    margin-top: 20px;
+    padding: 20px 0;
+    text-align: right;
+    font-family: "Montserrat";
+    font-size: 12px;
+    color: rgba(51, 57, 71, 1);
+    transition: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-item footer svg {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.post-item footer .repost-button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.post-item footer .repost-button:hover {
+    background-color: rgba(102, 222, 234, 1);
+}
+
+.post-item footer .repost-button svg {
+    fill: rgba(82, 89, 104, 1);
+    transition: all .5s;
+}
+
+.post-item footer .repost-button:hover svg {
+    fill: rgba(82, 89, 104, 1);
+}
+
+
+/* If there are svgs this is the default style */
+
+.post-item main svg {
+    width: 100%;
+    fill: rgba(102, 222, 234, 1);
+}
+
+
+/* ==========================================
+
+        404 Page styling START
+
+============================================ */
+
+#fof-background {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#fof-background svg {
+    width: auto;
+    height: 150%;
+    position: absolute;
+    left: -20%;
+    top: -30%;
+    fill: rgba(51, 57, 71, 1);
+    opacity: 0.23;
+}
+
+#fof-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    background-color: transparent;
+}
+
+#fof-container header {
+    width: 700px;
+    height: auto;
+    font-family: "industriale";
+    font-size: 100px;
+    color: rgba(102, 222, 234, 1);
+}
+
+#fof-container footer {
+    width: 700px;
+    height: auto;
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: rgba(82, 89, 104, 1);
+}
+
+
+/* -------- LOADING ICON ----------- */
+
+#loading-icon {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 50px 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(102, 222, 234, 1);
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%,
+    100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%,
+    100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+.load-more {
+    display: none;
+    width: 100%;
+    height: 50px;
+    color: rgba(102, 222, 234, 1);
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "industriale";
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.load-more:hover {
+    text-decoration: underline;
+}
+
+.no-more {
+    display: none;
+    width: 100%;
+    height: 50px;
+    color: rgba(82, 89, 104, 1);
+    font-family: "Montserrat";
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 40px 0;
+    margin: 50px 0 30px 0;
+}
+
+.no-more a {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: rgba(51, 57, 71, 1);
+}
+
+
+/* ---- COLOR PICKER STYLES ---- */
+/* Everything needs to be overriden... o.O */
+
+#color-picker #picker-shadow {
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+#color-picker #picker-border {
+    background: none !important;
+    background-color: rgba(24, 27, 33, 1) !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: 0 0 10px #000 !important;
+}
+
+#color-picker #picker-box-border {
+    border: none !important;
+}
+
+#color-picker #picker-box-mouse {
+    cursor: pointer !important;
+}
+
+#color-picker #slider-border {
+    border: none !important;
+}
+
+#color-picker #picker-cross div {
+    background: none !important;
+    background-color: rgba(24, 27, 33, 1) !important;
+}
+
+
+
+/* ---------- HOTSWAP CLASSES ----------- */
+
+.resize-center {
+    transform: scale(2);
+}
+
+
+/* ----------------------- ADD CUSTOM CONTENT UNDERNEATH THIS ------------------------- */

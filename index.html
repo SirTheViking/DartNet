@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <!-- Maybe make external sites for the css files -->
+    <title>DartNet | Start</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="/style_main.css">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script src="/script_jquery.js"></script>
+</head>
+
+<body>
+
+    <button id="menu-button">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+            </svg>
+        </button>
+
+    <!-- SVGs are courtesy of https://materialdesignicons.com/ -->
+    <div id="menu-items">
+        <a href="/sites_customise.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                <path d="M21.7,13.35L20.7,14.35L18.65,12.3L19.65,11.3C19.86,11.09 20.21,11.09 20.42,11.3L21.7,12.58C21.91,12.79 21.91,13.14 21.7,13.35M12,18.94L18.06,12.88L20.11,14.93L14.06,21H12V18.94M12,14C7.58,14 4,15.79 4,18V20H10V18.11L14,14.11C13.34,14.03 12.67,14 12,14M12,4A4,4 0 0,0 8,8A4,4 0 0,0 12,12A4,4 0 0,0 16,8A4,4 0 0,0 12,4Z"
+                />
+            </svg>
+        </a>
+        <a href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                <path d="M6.18,15.64A2.18,2.18 0 0,1 8.36,17.82C8.36,19 7.38,20 6.18,20C5,20 4,19 4,17.82A2.18,2.18 0 0,1 6.18,15.64M4,4.44A15.56,15.56 0 0,1 19.56,20H16.73A12.73,12.73 0 0,0 4,7.27V4.44M4,10.1A9.9,9.9 0 0,1 13.9,20H11.07A7.07,7.07 0 0,0 4,12.93V10.1Z"
+                />
+            </svg>
+        </a>
+        <a href="/sites_following.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="25" height="25" viewBox="0 0 24 24">
+                <path d="M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z"
+                />
+            </svg>
+        </a>
+        <a href="/sites_reposts.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                <path d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z" />
+            </svg>
+        </a>
+    </div>
+
+
+    <!-- Profile Sidebar Contents -->
+    <aside id="profile">
+        <div id="thumb">
+            <!-- get the source from JSON -->
+            <img src="">
+        </div>
+        <header id="username">$PLACEHOLDER_TEXT</header>
+        <main id="bio">
+            <p>$PLACEHOLDER_BIO</p>
+        </main>
+    </aside>
+
+    <main id="feed-content">
+        <form action="">
+            <!-- If it's empty dont submit -->
+            <textarea placeholder="Write something, html tags for formatted posts"></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <div id="feed">
+            <div id="loading-icon">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+                <button class="load-more">
+                        Load More
+                    </button>
+                <div class="no-more">
+                    <a href="#">
+                            You've reached the bottom
+                            <br>
+                            Click to go back to top
+                        </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/script_hash.js"></script>
+    <script src="/script_index.js"></script>
+    <script src="/script_rebuild.js"></script>
+</body>
+
+</html>

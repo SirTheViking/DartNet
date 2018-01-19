@@ -1,0 +1,16 @@
+{
+	"username": "@ClockWork",
+	"bio": "The cake is a lie.",
+	"profile_pic": "/img_profile.jpg",
+	"accent_color": "#66DEEA",
+	"background_color": "#181b21",
+	"secondary_background": "#181b21",
+	"secondary_font_dark": "#333947",
+	"secondary_font_light": "#525968",
+	"following": [
+		"dat://19e44c010aa36ec0ed6939a6f73670fa11548648416abd4190e3151bb26bbc51/",
+		"dat://8bd223c0bde0e555a35038657aca7b5843f6df97aff0fe93a24672ef8bb227e4/",
+		"dat://744e5c33baa9c9747fb80d553c24d9613ae5a2561638074676097056803e248d/",
+		"dat://7d4019ccef4446cb59f4a954da304053cf470b1a43b3e92ab38ffea3c8223e0e/"
+	]
+}
