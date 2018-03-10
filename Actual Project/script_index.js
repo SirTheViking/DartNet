@@ -105,7 +105,9 @@ $.ajax({
     // Request for your own profile.json to get info about yourself
     /**
      * Sadly, this needs to be async: false, until a better solution atleast
-     * since most functionality depends on this finishing and filling the arrays
+     * since most functionality depends on this finishing and filling the arrays,
+     * and since this file is usually local it will take literally no time 
+     * what so ever to finish.
      */
     type: "GET",
     dataType: "json",
@@ -145,6 +147,15 @@ $("#feed-content form").on("submit", function (e) {
 
     // Parse the content and replace newlines with breaklines since html doesnt get newlines
     let content = $("textarea", this).val().replace(/\n/g, "<br>");
+
+    switch(content) {
+        case "!rebuild()":
+            rebuild();
+            return;
+        case "!help":
+            console.log("[i] Feature not implemented yet!");
+            break;
+    }
 
     let timestamp = Math.floor(Date.now()); // Get the current timestamp
     let user = $("#username").text(); // Current user
