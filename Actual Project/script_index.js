@@ -148,6 +148,8 @@ $("#feed-content form").on("submit", function (e) {
     // Parse the content and replace newlines with breaklines since html doesnt get newlines
     let content = $("textarea", this).val().replace(/\n/g, "<br>");
 
+    // Check if any commands have been inputted in the form, if yes
+    // execute whatever the command should do.
     switch(content) {
         case "!rebuild()":
             rebuild();
@@ -162,6 +164,7 @@ $("#feed-content form").on("submit", function (e) {
     let user_image = archive.url + $("#profile img").attr("src"); // User Image
     let user_page = archive.url; // The start url of the user
 
+    // Empty the textarea after ithe post was made
     $("textarea", this).val("");
 
     json["content"] = content;
