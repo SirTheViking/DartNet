@@ -131,8 +131,6 @@
     <script src="/script_hash.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            console.log(sha256("Carlos"));
-
             // Initializing the template colors and values
             // for live updating, so the user understands what's changing
             $(".username").val(user_profile.username).on("input propertychange paste", function () {
@@ -151,7 +149,7 @@
             });
 
 
-
+            // Accent Color Input
             $(".ac").val(colors.accent.substr(1)).css("background-color", colors.accent).change(function () {
                 $(".post-item header a, #username, #customisation-content button").css({
                     "color": $(this).val()
@@ -171,7 +169,7 @@
                 });
             });
 
-
+            // Background Color Input
             $(".bc").val(colors.background.substr(1)).css("background-color", colors.background).change(
                 function () {
                     $("body, html").css({
@@ -182,7 +180,7 @@
                     });
                 });
 
-
+            // Secondary Background Color Input
             $(".sbc").val(colors.sbackground.substr(1)).css("background-color", colors.sbackground).change(
                 function () {
                     $(".post-item, #customisation-content button").css({
@@ -190,7 +188,7 @@
                     });
                 });
 
-
+            // Font Color 1
             $(".fcl").val(colors.sfontlight.substr(1)).css("background-color", colors.sfontlight).change(
                 function () {
                     $(
@@ -200,7 +198,7 @@
                     });
                 });
 
-
+            // Font color 2
             $(".fcd").val(colors.sfontdark.substr(1)).css("background-color", colors.sfontdark).change(function () {
                 $(".post-item main footer").css({
                     "color": $(this).val()
