@@ -1,4 +1,4 @@
-# DartNet - P2P social network test in Beaker browser v 0.7.10
+# DartNet - P2P social network test in Beaker browser
 
 ### Screenshots
 
